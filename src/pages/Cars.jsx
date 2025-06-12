@@ -1,36 +1,42 @@
+import { useState } from "react";
 import CarCard from "../components/CarCard";
-import Ferrari50 from "../assets/Ferrari50.png";
+import { exampleCar } from "../data/CarData";
 
 const Cars = () => {
-    const exampleCar = {
-        class: "LMH",
-        make: "Ferrari",
-        name: "449P",
-        number: "50",
-        engine: {
-            manufacturer: "Ferrari",
-            name: "Tipo F163",
-            displacement: "2,992 cc",
-            layout: "V6",
-            electrical: {
-                powerKw: "200 kW",
-                powerHp: "268 hp",
-                manufacturer: "Ferrari"
-            }
-        },
-        team: {
-            name: "AF Corse",
-            country: "Italy",
-            isFactoryTeam: true
-        },
-        chassisManufacturer: "Dallara",
-        image: Ferrari50
+    const [sorting, setSorting] = useState("By Make");
+
+    const changeSorting = (e) => {
+        if (e.target.checked) {
+            setSorting("By Pole");
+        }
+        else {
+            setSorting("By Make");
+        }
+    }
+
+    function carList() {
+        if (sorting === "By Make") {
+            return <CarCard car={exampleCar} />
+        }
+        else {
+            return <CarCard car={exampleCar} />;
+        }
     }
 
     return (
-        <div>
-            <h1>Cars</h1>
-            <CarCard car={exampleCar} />
+        <div className="container mx-auto px-4">
+            <div className="flex items-end mb-8">
+                <h1 className="text-4xl font-bold">Cars</h1>
+                <div className="ml-auto flex items-center">
+                    <p className="text-sm font-bold">Sort By Make</p>
+                    <input type="checkbox" onChange={changeSorting} className="mx-1 toggle border-2 border-red-500 text-red-500 f bg-white bg-red-500 checked:text-blue-500 checked:border-blue-500"/>
+                    <p className="text-sm font-bold">By Pole</p>
+                </div>
+            </div>
+
+            <div>
+                {carList()}
+            </div>
         </div>
     );
 }

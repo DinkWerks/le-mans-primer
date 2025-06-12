@@ -11,10 +11,10 @@ function Navbar({handleSetContentPath}) {
             <div className='left-triangle' />
             <div className='bg-white w-20' />
             <ul className="menu menu-horizontal rounded-none bg-white rounded-box">
-                <li><btn className="btn btn-ghost" onClick={() => changePage("Home")} >Home</btn></li>
-                <li><btn className="btn btn-ghost" onClick={() => changePage("About")}>About</btn></li>
-                <li><btn className="btn btn-ghost" onClick={() => changePage("Cars")}>Cars</btn></li>
-                <li><btn className="btn btn-ghost" onClick={() => changePage("Track")}>Track</btn></li>
+                <li><button className="btn btn-ghost" onClick={() => changePage("Home")} >Home</button></li>
+                <li><button className="btn btn-ghost" onClick={() => changePage("About")}>About</button></li>
+                <li><button className="btn btn-ghost" onClick={() => changePage("Cars")}>Cars</button></li>
+                <li><button className="btn btn-ghost" onClick={() => changePage("Track")}>Track</button></li>
             </ul>
             <div className='bg-white w-20' />
             <div className='right-triangle' />
