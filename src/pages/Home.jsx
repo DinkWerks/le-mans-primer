@@ -1,5 +1,6 @@
 import "./Home.css";
-import LineUp from "../assets/HomeLineUp.jpg"
+import LineUp from "../assets/HomeLineUp.jpg";
+import Logo from "../assets/logo.svg";
 
 function Home() {
     return (
@@ -8,10 +9,8 @@ function Home() {
                 <img src={LineUp} alt="All competing Le Mans cars lined up on the start grid."/>
             </div>
             <div style={homeContentStyle}>
-                <div className="title-container">
-                    <p className="audiowide-regular twenty-four">24</p>
-                    <p className="audiowide-regular lemans">Hours of Le Mans</p>
-                    <p className="year">2025</p>
+                <div className="flex flex-col items-center m-8">
+                    <img src={Logo} alt="Le Mans Logo" className="mb-6"/>
                     <p className="tagline">The 93rd Running of Motorsport's Most Legendary Race</p>
                 </div>
             </div>
