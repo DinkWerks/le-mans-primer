@@ -1,0 +1,15 @@
+.left-triangle{
+    width: 50px;
+    aspect-ratio: cos(20deg);
+    clip-path: polygon(101% 0,0 50%,101% 100%);
+    background-color: white;
+    margin-left: auto;
+}
+
+
+.right-triangle{
+    width: 50px;
+    aspect-ratio: cos(20deg);
+    clip-path: polygon(-2% 0,100% 50%,-2% 100%);
+    background-color: white;
+}
