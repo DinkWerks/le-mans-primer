@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/le-mans-primer/static/css/main.a460cb09.css",
-    "main.js": "/le-mans-primer/static/js/main.74a77b2a.js",
+    "main.js": "/le-mans-primer/static/js/main.a7adf8ad.js",
     "static/js/453.c8bb7dc1.chunk.js": "/le-mans-primer/static/js/453.c8bb7dc1.chunk.js",
     "static/media/Ferrari50.png": "/le-mans-primer/static/media/Ferrari50.00fc7afb402630cbd06b.png",
     "static/media/HomeLineUp.jpg": "/le-mans-primer/static/media/HomeLineUp.beb16551f472ae78ab94.jpg",
+    "static/media/logo.svg": "/le-mans-primer/static/media/logo.13bdab5ade04720752d6a9d2ccb5cea4.svg",
     "index.html": "/le-mans-primer/index.html",
     "main.a460cb09.css.map": "/le-mans-primer/static/css/main.a460cb09.css.map",
-    "main.74a77b2a.js.map": "/le-mans-primer/static/js/main.74a77b2a.js.map",
+    "main.a7adf8ad.js.map": "/le-mans-primer/static/js/main.a7adf8ad.js.map",
     "453.c8bb7dc1.chunk.js.map": "/le-mans-primer/static/js/453.c8bb7dc1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a460cb09.css",
-    "static/js/main.74a77b2a.js"
+    "static/js/main.a7adf8ad.js"
   ]
 }
