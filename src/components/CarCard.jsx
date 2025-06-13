@@ -1,5 +1,6 @@
 import React from 'react'
 import DriverPills from './DriverPills'
+import CarModal from './CarModal'
 
 export default function CarCard({ car }) {
     function getElectricalBadge() {
@@ -33,8 +34,12 @@ export default function CarCard({ car }) {
                 </div>
     }
 
+    function openDetails(){
+        document.getElementById("car-details-" + car.number).showModal()
+    }
+
     return (
-        <div className='flex border bg-base-200 shadow-lg w-[350px]'>
+        <div className='flex border bg-base-200 shadow-lg w-[350px]' onClick={() => openDetails()}>
             {getEntryType()}
             <div>
                 <div className='flex'>
@@ -47,7 +52,6 @@ export default function CarCard({ car }) {
                             <span className='h-3 flag-icon flag-icon-it' data-tip={car.maker.country} />
                             <h1 className='text-sm font-semibold ml-2'>{car.maker.name} {car.name}</h1>
                         </div>
-
                     </div>
                     <h1 className='text-xl font-bold bg-base-300 ml-auto py-2 px-4 ring'>{car.number}</h1>
                 </div>
@@ -55,17 +59,18 @@ export default function CarCard({ car }) {
                 <div className='px-4 grid grid-cols-[auto_1fr] items-center gap-y-1 gap-x-2 mb-2'>
                     <label className='text-sm font-bold'>Engine:</label>
                     <p className='text-sm'>{car.engine.manufacturer} {car.engine.name}</p>
-                    <label className='text-sm font-bold'>Displacement:</label>
-                    <div className='text-sm flex'>{car.engine.displacement} {getElectricalBadge()}</div>
+                    <label className='text-sm font-bold'>Config:</label>
+                    <div className='text-sm flex'>{car.engine.layout} {car.engine.displacement} {getElectricalBadge()}</div>
                     <label className='text-sm font-bold'>Chassis:</label>
                     <p className='text-sm'>{car.chassisManufacturer}</p>
                 </div>
-                <div>
+                <div className='pb-4 px-4 flex flex-wrap gap-1'>
                     {car.drivers.map((driver) => (
                         <DriverPills driver={driver} />
                     ))}
                 </div>
             </div>
+            <CarModal car={car}/>
         </div>
     )
 }
